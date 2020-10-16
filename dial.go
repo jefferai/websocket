@@ -152,7 +152,7 @@ func handshakeRequest(ctx context.Context, urls string, opts *DialOptions, copts
 		u.Scheme = "http"
 	case "wss":
 		u.Scheme = "https"
-	case "http", "https":
+	case "http", "https", "unix":
 	default:
 		return nil, fmt.Errorf("unexpected url scheme: %q", u.Scheme)
 	}
